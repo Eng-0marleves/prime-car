@@ -1,0 +1,615 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+/* ========================================
+global section style start
+======================================== */
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    color: #fff;
+}
+body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+    width: 10px;
+}
+body::-webkit-scrollbar-track {
+    background-color: #ddd;
+    padding: 0 5px;
+}
+body::-webkit-scrollbar-thumb {
+    background: #000;
+    box-shadow: inset 0 0 3px #fff;
+}
+section {
+    min-height: 100vh;
+    padding: 0 20px;
+}
+section:not(:first-child) {
+    padding: 11vh 20px;
+}
+.btn {
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    padding: 3px;
+    font-size: 18px;
+    padding: 5px 20px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    transition: all .3s ease-in-out;    
+}
+.btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+.title {
+    font-family: Helvetica, Regular;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+}
+/* ========================================
+global section style end
+======================================== */
+
+
+/* ========================================
+header section style start
+======================================= */
+header {
+    position: fixed;
+    background: transparent;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    transition: all 0.2s ease-in-out;
+    z-index: 10000;
+}
+header .logo {
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+header .nav {
+    display: flex;
+    align-items: center;
+    transition: all .3s ease-in-out;
+}
+header .nav li {
+    margin: 0 15px;
+}
+header .nav li:last-child {
+    display: none;
+}
+header .nav li a {
+    font-size: 20px;
+    position: relative;
+}
+header .nav li a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px; left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition: all .3s ease-in-out;
+}
+header .nav li a:hover::after {
+    width: 100%;
+}
+header .nav li a.active::after {
+    width: 100%;
+}
+.menue-btn {
+    display: none;
+    cursor: pointer;
+    z-index: 100;
+}
+.bar1,.bar2,.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: all 0.4s ease-in-out;
+}
+.menue-btn.active .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+.menue-btn.active .bar2 {
+    opacity: 0;
+}
+.menue-btn.active .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+/* ========================================
+global section style end
+======================================== */
+
+
+/* ========================================
+home section style start
+======================================== */
+#home {
+    position: relative;
+    background: url("images/background.png");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    text-align: right;
+}
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.075);
+}
+#home span {
+    letter-spacing: 6px;
+    font-weight: bold;
+    font-size: 64px;
+    text-transform: uppercase;
+    z-index: 2;
+}
+#home p {
+    width: 300px;
+    margin-bottom: 20px;
+    z-index: 2;
+}
+#home .btn {
+    z-index: 2;
+}
+/* ========================================
+home section style end
+======================================== */
+
+
+/* ========================================
+about section style start
+======================================== */
+#about {
+    background: #373737;
+}
+#about .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10vh;
+}
+#about .container img {
+    width: 50%;
+}
+#about .container p {
+    width: 45%;
+}
+/* ========================================
+about section style end
+======================================== */
+
+
+/* ========================================
+benefits section style start
+======================================== */
+#benefits {
+    position: relative;
+    background: #1A191A;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#benefits .title {
+    z-index: 100;
+}
+#benefits small {
+    text-align: center;
+    z-index: 100;
+}
+#benefits .lines {
+    position: absolute;
+    width: 235px;
+    height: 232px;
+}
+#benefits .lines:first-child {
+    top: 0; left: 0;
+}
+#benefits .lines:last-child {
+    bottom: 0; right: 0;
+}
+#benefits .container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 100;
+}
+#benefits .container .card {
+    position: relative;
+    width: 280px;
+    padding: 110px 20px 20px;
+    background: #CF2929;
+    margin: 50px 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+#benefits .container .card:first-child {
+    background: #00DDA8;
+}
+#benefits .container .card:last-child {
+    background: #0058DD;
+}
+#benefits .container .card img {
+    position: absolute;
+    width: 161px;
+    height: 161px;
+    top: -30%; left: 20%;
+}
+#benefits .container .card span {
+    font-weight: bold;
+    font-size: 21px;
+}
+#benefits .container .card p {
+    margin-top: 10px;
+}
+/* ========================================
+benefits section style end
+======================================== */
+
+
+/* ========================================
+cars section style start
+======================================== */
+#cars {
+    background: rgba(0, 0, 0, 0.8);
+}
+#cars .title,
+#cars small {
+    text-align: left;
+}
+/* slider */
+.slider {
+    margin-top: 50px;
+}
+.swiper {
+    width: 100%;
+}
+.swiper-wrapper {
+    margin-bottom: 20px;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.swiper {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.swiper-slide {
+    background-size: cover;
+    background-position: center;
+}
+.mySwiper2 {
+    height: 80%;
+    width: 100%;
+}
+.mySwiper {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+.mySwiper .swiper-slide {
+    width: 25%;
+    height: 100px;
+    opacity: 0.4;
+}
+.mySwiper .swiper-slide img {
+    width: 100%;
+    object-fit: cover;
+}
+.mySwiper .swiper-slide-thumb-active {
+    opacity: 1;
+}
+.swiper-slide img {
+    display: block;
+    width: 570px;
+    height: 270px;
+    object-fit: cover;
+}
+#cars .slider .card {
+    position: relative;
+    overflow: hidden;
+}
+#cars .slider .card .info {
+    position: absolute;
+    top: 100%; left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.8);
+    transition: all .3s ease-in-out; 
+}
+#cars .slider .card:hover .info {
+    top: 0;
+}
+#cars .slider .card .info h3 ,
+#cars .slider .card .info p {
+    margin-bottom: 10px;
+}
+/* demo */
+.demo {
+    position: relative;
+    min-height: 90vh;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.demo img {
+    position: absolute;
+    width: 227.07px;
+    height: 227.07px;
+}
+.demo img:first-child {
+    top: 0; left: 0;
+}
+.demo img:last-child {
+    bottom: 0; right: 0;
+}
+.demo .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;   
+    z-index: 10; 
+}
+.demo .video {
+    height: 70vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.demo .video iframe {
+    width: 70%;
+    height: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+    z-index: 10; 
+}
+/* ========================================
+cars section style end
+======================================== */
+
+
+/* ========================================
+contact section style start
+======================================== */
+#contact {
+    position: relative;
+    height: fit-content !important;
+    padding: 11vh 20px;
+    background: rgba(22, 22, 22, 1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#contact span {
+    position: absolute;
+    top: 10px; left: 0;
+    font-size: 128px;
+    font-weight: bold;
+    color: rgba(55, 55, 55, 1);
+
+}
+#contact .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    z-index: 10;
+}
+#contact .container div {
+    text-align: left;
+}
+#contact .container form div input,
+#contact .container form textarea {
+    width: 250px;
+    color: #fff;
+    background: transparent;
+    border: none;
+    outline: none;
+    margin: 10px;
+    padding: 5px 0;
+    border-bottom: 2px solid #fff;
+}
+#contact .container form textarea {
+    resize: none;
+    width: 100%;
+    height: 100px;
+    color: #fff;
+}
+#contact .container form div input::placeholder,
+#contact .container form textarea::placeholder {
+    color: #fff;
+}
+#contact .container form div input:focus::placeholder,
+#contact .container form textarea:focus::placeholder {
+    opacity: .2;
+    transition: all .3s ease-in-out;
+}
+#contact .container form a {
+    margin-left: 10px;
+}
+/* map */
+.map {
+    width: 100%;
+    height: 200px;
+}
+/* links */
+.links {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    background: rgba(22, 22, 22, 1);
+}
+.links div {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+.links div span {
+    color: #fff;
+    font-weight: bold;
+    font-size: 32px;
+}
+.links div .item {
+    margin-top: 10px;
+    color: #BDBDBD;
+}
+.links div .media {
+    display: flex;
+    flex-direction: row;
+}
+.links div .media a {
+    font-size: 24px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+.links div .media a:hover li {
+    color: #BDBDBD;
+    transition: all 0.5s ease-in-out;
+}
+/* footer */
+.footer {
+    text-align: center;
+    background: rgba(22, 22, 22, 1);
+    padding: 10px 0;
+}
+/* ========================================
+contact section style end
+======================================== */
+
+
+/* ========================================
+responsive section style start
+======================================== */
+@media (max-width: 768px) {
+    .title {
+        font-size: 32px;
+    }
+    /* header */
+    header .nav {
+        position: fixed;
+        top: 0; right: 100%;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: rgba(0, 0, 0, 0.9);
+    }
+    .nav.active {
+        right: 0;
+    }
+    header .nav li {
+        margin: 10px 0;
+    }
+    header .nav li:last-child {
+        display: block; 
+    }
+    header .btn {
+        display: none;
+    }
+    .menue-btn{
+        display: block;
+    }
+    /* home */
+    #home {
+        justify-content: center;
+        align-items: center;
+    }
+    #home span {
+        font-size: 48px;
+        text-align: center;        
+    }
+    #home p {
+        width: 60%;
+        text-align: center;
+    } 
+    /* about */
+    #about .container {
+        flex-direction: column;
+    }
+    #about .container p {
+        width: 100%;
+        text-align: center;
+    }
+    #about .container img {
+        width: 100%;
+        margin-top: 20px;
+    }
+    /* contactForm */
+    #contact .container form {
+        margin-top: 20px;
+    }
+}
+@media (max-width: 768px) {
+    /* home */
+    #home span {
+        font-size: 40px;
+    }
+}
+@media (max-width: 320px) {
+    /* home */
+    #home span {
+        font-size: 30px;
+    }
+}
+/* ========================================
+responsive section style end
+======================================== */

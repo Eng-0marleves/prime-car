@@ -597,6 +597,9 @@ responsive section style start
     #contact .container form {
         margin-top: 20px;
     }
+    #contact span {
+        display: none;
+    }
 }
 @media (max-width: 768px) {
     /* home */

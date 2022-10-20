@@ -485,6 +485,14 @@ contact section style start
     opacity: .2;
     transition: all .3s ease-in-out;
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
 #contact .container form a {
     margin-left: 10px;
 }
